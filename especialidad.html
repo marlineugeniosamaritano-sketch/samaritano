@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulia Samaritano - Especialidad</title>
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Dulia Samaritano</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="especialidad.html" class="active">Especialidad</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BANNER DE ESPECIALIDAD -->
+    <header class="spec-hero">
+        <div class="spec-hero-content">
+            <span class="badge-tag"><i class="fa-solid fa-microchip"></i> ÁREAS DE ESPECIALIZACIÓN TÉCNICA</span>
+            <h1 class="spec-hero-title">Especialidad en Soporte & Mantenimiento</h1>
+            <p class="spec-hero-desc">
+                Maximizamos el rendimiento de tu infraestructura tecnológica. Haz clic en "Ver más detalles" en cada servicio para consultar precios, tiempo de ejecución y alcance.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- TARJETAS CON BOTONES INTERACTIVOS -->
+        <section class="spec-grid">
+            
+            <!-- Card 1 -->
+            <div class="spec-card card-glow-blue">
+                <div class="spec-badge">Hardware</div>
+                <div class="spec-icon-box">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3>Mantenimiento de Hardware</h3>
+                <p>Limpieza profunda ultrasónica, cambio de pasta térmica de alto rendimiento y reemplazo de componentes dañados en PC, Laptops y Servidores.</p>
+                <button class="btn-detail" onclick="openModal('m-hardware')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="spec-card card-glow-cyan">
+                <div class="spec-badge">Software</div>
+                <div class="spec-icon-box">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3>Optimización de Sistemas</h3>
+                <p>Formateo e instalación limpia de Windows/Linux, eliminación de malware, actualización de controladores oficiales y aceleración de velocidad de arranque.</p>
+                <button class="btn-detail" onclick="openModal('m-software')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="spec-card card-glow-purple">
+                <div class="spec-badge">Redes</div>
+                <div class="spec-icon-box">
+                    <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <h3>Cableado & Wi-Fi Empresarial</h3>
+                <p>Diseño y armado de cableado estructurado Cat6/6A, organización de Racks de servidores, instalación de Access Points y creación de redes VLANs.</p>
+                <button class="btn-detail" onclick="openModal('m-redes')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="spec-card card-glow-amber">
+                <div class="spec-badge">Datos</div>
+                <div class="spec-icon-box">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3>Respaldos & Backup Digital</h3>
+                <p>Implementación de copias de seguridad automáticas en la nube o discos NAS empresariales para resguardar archivos importantes de tu empresa.</p>
+                <button class="btn-detail" onclick="openModal('m-backup')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="spec-card card-glow-red">
+                <div class="spec-badge">Seguridad</div>
+                <div class="spec-icon-box">
+                    <i class="fa-solid fa-shield-virus"></i>
+                </div>
+                <h3>Antivirus & Firewalls</h3>
+                <p>Protección corporativa contra ransomware y virus informáticos. Bloqueo de páginas no autorizadas y monitoreo de tráfico de red en oficinas.</p>
+                <button class="btn-detail" onclick="openModal('m-seguridad')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="spec-card card-glow-green">
+                <div class="spec-badge">Soporte</div>
+                <div class="spec-icon-box">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3>Soporte Remoto Inmediato</h3>
+                <p>Atención remota rápida para solucionar problemas informáticos diarios como impresoras en red, configuración de correo y errores de software.</p>
+                <button class="btn-detail" onclick="openModal('m-soporte')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </section>
+
+        <!-- METODOLOGÍA DE TRABAJO -->
+        <section class="process-section">
+            <div class="process-header">
+                <span class="badge-tag">METODOLOGÍA DE TRABAJO</span>
+                <h2 class="process-title">¿Cómo atendemos tu negocio?</h2>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h4>Diagnóstico Inicial</h4>
+                    <p>Revisamos el estado físico y rendimiento del sistema para encontrar la falla exacta.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-file-signature"></i></div>
+                    <h4>Cotización Clara</h4>
+                    <p>Presentamos una propuesta de reparación o mantenimiento sin costos ocultos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h4>Mantenimiento</h4>
+                    <p>Ejecutamos el trabajo técnico con repuestos de calidad y herramientas avanzadas.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h4>Pruebas & Garantía</h4>
+                    <p>Entregamos tu equipo verificado con reporte técnico y garantía por servicio.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- VENTANA POPUP / MODAL PARA DETALLES -->
+    <div id="modal-container" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA / FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h2>Dulia Samaritano</h2>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-location-dot"></i> Dulia Samaritano</p>
+                <p><i class="fa-solid fa-map-pin"></i> Calle Segura #100, Huaral</p>
+                <p><i class="fa-solid fa-envelope"></i> info@duliasamaritano.edu.pe</p>
+            </div>
+            <div class="footer-social-copy">
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-solid fa-play"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">© 2026 Dulia Samaritano.<br>Protegiendo el futuro digital.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT PARA INTERACCIÓN -->
+    <script>
+        const detailsData = {
+            'm-hardware': {
+                title: 'Mantenimiento de Hardware',
+                icon: 'fa-microchip',
+                desc: 'Servicio técnico especializado para preservar la vida útil de tus equipos informáticos y evitar fallas críticas por recalentamiento.',
+                features: [
+                    'Limpieza profunda interna y soplado de polvo.',
+                    'Cambio de pasta térmica de alta conductividad.',
+                    'Revisión y prueba de fuentes de poder, discos y memoria RAM.',
+                    'Reparación de bisagras y cambio de pantallas de laptop.'
+                ],
+                time: '2 a 4 horas por equipo',
+                warranty: '3 meses de garantía técnica'
+            },
+            'm-software': {
+                title: 'Optimización de Sistemas Lógicos',
+                icon: 'fa-laptop-code',
+                desc: 'Aceleramos tus computadoras lento formateando de manera limpia o desinstalando programas pesados e innecesarios.',
+                features: [
+                    'Instalación de Windows 10/11 o Linux Licenciado.',
+                    'Limpieza completa de virus, spyware y troyanos.',
+                    'Instalación de utilitarios (Office, PDF, compresión).',
+                    'Aceleración de inicio y actualización de controladores.'
+                ],
+                time: '1 a 3 horas por equipo',
+                warranty: 'Soporte continuo de 30 días'
+            },
+            'm-redes': {
+                title: 'Cableado Estructurado & Wi-Fi',
+                icon: 'fa-diagram-project',
+                desc: 'Mejoramos la velocidad de internet de tu negocio organizando los cables y configurando puntos de acceso inalámbricos.',
+                features: [
+                    'Cableado Cat6 y Cat6A con conectores RJ45 apantallados.',
+                    'Organización, peinado y etiquetado en Racks de red.',
+                    'Configuración de Routers Mikrotik / Cisco y VLANs.',
+                    'Eliminación de zonas muertas de Wi-Fi con Access Points.'
+                ],
+                time: 'Según el tamaño del local/oficina',
+                warranty: '6 meses de garantía en instalación'
+            },
+            'm-backup': {
+                title: 'Respaldos & Copias de Seguridad',
+                icon: 'fa-database',
+                desc: 'Protegemos la información contable, facturas e historial de tu negocio frente a perdidas o ataques de ransomware.',
+                features: [
+                    'Sincronización automática de carpetas clave a la nube.',
+                    'Configuración de servidor NAS de respaldo local.',
+                    'Recuperación de datos de discos formateados o dañados.',
+                    'Encriptación de seguridad para datos confidenciales.'
+                ],
+                time: 'Configuración inicial en 24 horas',
+                warranty: 'Monitoreo diario de backups'
+            },
+            'm-seguridad': {
+                title: 'Antivirus Corporativo & Firewalls',
+                icon: 'fa-shield-virus',
+                desc: 'Blindamos las computadoras de tu empresa para prevenir robos de contraseñas e intrusiones externas.',
+                features: [
+                    'Antivirus centralizado empresarial con consola de mando.',
+                    'Bloqueo de sitios web peligrosos o redes sociales en hora de trabajo.',
+                    'Configuración de Firewall de red para protección perimetral.',
+                    'Análisis semanal de amenazas en tiempo real.'
+                ],
+                time: 'Instalación en 1 día hábil',
+                warranty: 'Licencia activa con soporte'
+            },
+            'm-soporte': {
+                title: 'Soporte Técnico Remoto 24/7',
+                icon: 'fa-headset',
+                desc: 'Solucionamos tus problemas técnicos sin necesidad de mover el equipo de tu escritorio.',
+                features: [
+                    'Asistencia rápida a través de AnyDesk o TeamViewer.',
+                    'Configuración de impresoras y escáneres compartidos.',
+                    'Asistencia en correo corporativo Outlook / Gmail.',
+                    'Resolución de errores de programas de facturación o ventas.'
+                ],
+                time: 'Atención inmediata en menos de 15 minutos',
+                warranty: 'Atención personalizada'
+            }
+        };
+
+        function openModal(key) {
+            const data = detailsData[key];
+            if(!data) return;
+
+            let listHTML = '';
+            data.features.forEach(f => {
+                listHTML += `<li><i class="fa-solid fa-check-circle"></i> ${f}</li>`;
+            });
+
+            const content = `
+                <div class="modal-header">
+                    <i class="fa-solid ${data.icon} modal-icon"></i>
+                    <h2>${data.title}</h2>
+                </div>
+                <p class="modal-desc">${data.desc}</p>
+                <div class="modal-details">
+                    <h4><i class="fa-solid fa-list-check"></i> ¿Qué incluye el servicio?</h4>
+                    <ul class="modal-list">${listHTML}</ul>
+                    <div class="modal-info-pills">
+                        <span><i class="fa-solid fa-clock"></i> <strong>Tiempo est.:</strong> ${data.time}</span>
+                        <span><i class="fa-solid fa-shield"></i> <strong>Garantía:</strong> ${data.warranty}</span>
+                    </div>
+                </div>
+                <a href="contacto.html" class="btn btn-primary modal-btn">Solicitar este servicio <i class="fa-solid fa-paper-plane"></i></a>
+            `;
+
+            document.getElementById('modal-content').innerHTML = content;
+            document.getElementById('modal-container').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-container').classList.remove('active');
+        }
+
+        // Cerrar al hacer clic fuera de la caja
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal-container');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>

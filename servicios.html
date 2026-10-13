@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulia Samaritano - Servicios</title>
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Dulia Samaritano</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+                <li><a href="especialidad.html">Especialidad</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BANNER HERO SUPERIOR DE SERVICIOS -->
+    <header class="services-hero">
+        <div class="services-hero-content">
+            <span class="badge-tag"><i class="fa-solid fa-layer-group"></i> PORTAFOLIO CORPORATIVO</span>
+            <h1 class="services-hero-title">Nuestros Servicios de TI & Ciberseguridad</h1>
+            <p class="services-hero-desc">
+                Ofrecemos soluciones integrales de tecnología de la información, protección de infraestructura de red y soporte técnico para optimizar la seguridad y el rendimiento de tu negocio.
+            </p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- ENCABEZADO DE SECCIÓN -->
+        <div class="services-header-text">
+            <span class="section-tag">NUESTROS SERVICIOS</span>
+            <h2 class="section-title">Soluciones Especializadas</h2>
+            <p class="section-description">
+                Haz clic en "Ver más detalles" en cualquiera de nuestros servicios para consultar nuestro alcance técnico y metodología.
+            </p>
+        </div>
+
+        <!-- TARJETAS DE SERVICIOS CON DISEÑO PREMIUM -->
+        <div class="cards-grid">
+            
+            <!-- Card 1: Auditoría de Seguridad -->
+            <div class="card card-blue">
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h3>Auditoría de Seguridad</h3>
+                <p>Evaluaciones exhaustivas para identificar y mitigar vulnerabilidades críticas en sus sistemas e infraestructura informáticos.</p>
+                <button class="btn-service-detail" onclick="openServiceModal('s-auditoria')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 2: Protección de Redes -->
+            <div class="card card-green">
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <h3>Protección de Redes</h3>
+                <p>Monitoreo y defensa proactiva para garantizar la integridad, estabilidad y rendimiento del tráfico de su red empresarial.</p>
+                <button class="btn-service-detail" onclick="openServiceModal('s-redes')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 3: Seguridad en la Nube -->
+            <div class="card card-purple">
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <h3>Seguridad en la Nube</h3>
+                <p>Estrategias de ciberprotección robustas y personalizadas para entornos híbridos, servidores NAS y aplicaciones en la nube.</p>
+                <button class="btn-service-detail" onclick="openServiceModal('s-nube')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 4: Respuesta a Incidentes -->
+            <div class="card card-amber">
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                </div>
+                <h3>Respuesta a Incidentes</h3>
+                <p>Protocolos de acción rápidos y altamente efectivos ante ciberataques, infecciones por ransomware y brechas de seguridad.</p>
+                <button class="btn-service-detail" onclick="openServiceModal('s-incidentes')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Card 5: Consultoría y Estrategia -->
+            <div class="card card-red">
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-shield-cat"></i>
+                </div>
+                <h3>Consultoría y Estrategia</h3>
+                <p>Asesoramiento experto continuo para desarrollar políticas internas de seguridad, continuidad de negocio y planes de mantenimiento.</p>
+                <button class="btn-service-detail" onclick="openServiceModal('s-consultoria')">Ver más detalles <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN DE ATENCIÓN DIRECTA Y COTIZACIÓN -->
+        <section class="services-cta-box">
+            <div class="cta-content">
+                <span class="badge-tag"><i class="fa-solid fa-headset"></i> ATENCIÓN PERSONALIZADA</span>
+                <h3>¿Necesitas una solución técnica a la medida de tu negocio?</h3>
+                <p>Evaluamos el estado de tus sistemas y redactamos una propuesta clara de servicio sin compromiso.</p>
+            </div>
+            <a href="contacto.html" class="btn btn-primary cta-btn">Solicitar Cotización <i class="fa-solid fa-paper-plane"></i></a>
+        </section>
+
+    </main>
+
+    <!-- VENTANA POPUP / MODAL PARA DETALLES DE SERVICIOS -->
+    <div id="service-modal-container" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeServiceModal()">&times;</button>
+            <div id="service-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA / FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h2>Dulia Samaritano</h2>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fa-solid fa-location-dot"></i> Dulia Samaritano</p>
+                <p><i class="fa-solid fa-map-pin"></i> Calle Segura #100, Huaral</p>
+                <p><i class="fa-solid fa-envelope"></i> info@duliasamaritano.edu.pe</p>
+            </div>
+            <div class="footer-social-copy">
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-solid fa-play"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">© 2026 Dulia Samaritano.<br>Protegiendo el futuro digital.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        const servicesData = {
+            's-auditoria': {
+                title: 'Auditoría de Seguridad',
+                icon: 'fa-shield-halved',
+                desc: 'Realizamos un diagnóstico exhaustivo de tus sistemas informáticos para detectar puntos vulnerables antes de que puedan ser explotados.',
+                points: [
+                    'Escaneo de vulnerabilidades en servidores y estaciones de trabajo.',
+                    'Análisis de puertos de red abiertos y accesos no autorizados.',
+                    'Pruebas de solidez en contraseñas y permisos de usuarios.',
+                    'Informe técnico detallado con recomendaciones de corrección.'
+                ]
+            },
+            's-redes': {
+                title: 'Protección de Redes Empresariales',
+                icon: 'fa-network-wired',
+                desc: 'Aseguramos que el flujo de datos e internet en tus oficinas sea veloz, estable y protegido contra filtraciones.',
+                points: [
+                    'Configuración de Firewalls perimetrales de seguridad.',
+                    'Segmentación de redes Wi-Fi (Red Administrativa vs Red Clientes).',
+                    'Bloqueo de contenidos maliciosos o no laborales.',
+                    'Monitoreo de tráfico sospechoso en tiempo real.'
+                ]
+            },
+            's-nube': {
+                title: 'Seguridad en la Nube',
+                icon: 'fa-server',
+                desc: 'Protegemos tus archivos, carpetas compartidas y respaldos almacenados en la nube o servidores NAS.',
+                points: [
+                    'Encriptación de datos sensibles para evitar fugas de información.',
+                    'Gestión de accesos seguros con autenticación de doble factor (2FA).',
+                    'Sincronización automatizada de copias de respaldo.',
+                    'Protección contra pérdida de datos por fallas físicas de discos.'
+                ]
+            },
+            's-incidentes': {
+                title: 'Respuesta a Incidentes',
+                icon: 'fa-arrows-split-up-and-left',
+                desc: 'Brindamos contención y recuperación rápida ante ciberataques, bloqueos de sistema o infecciones de virus.',
+                points: [
+                    'Aislamiento preventivo de equipos comprometidos.',
+                    'Eliminación de agentes maliciosos y desinfección de discos.',
+                    'Restauración de copias de seguridad de archivos clave.',
+                    'Análisis forense inicial para determinar la causa del fallo.'
+                ]
+            },
+            's-consultoria': {
+                title: 'Consultoría y Estrategia',
+                icon: 'fa-shield-cat',
+                desc: 'Acompañamiento continuo a gerentes y administradores para diseñar planes de mantenimiento y seguridad acordes a su presupuesto.',
+                points: [
+                    'Diseño de políticas de uso adecuado de computadoras en la empresa.',
+                    'Planes de contingencia y continuidad operativa del negocio.',
+                    'Asesoría en la compra y renovación de equipos de cómputo.',
+                    'Supervisión y control periódico de estándares de TI.'
+                ]
+            }
+        };
+
+        function openServiceModal(key) {
+            const data = servicesData[key];
+            if(!data) return;
+
+            let pointsHTML = '';
+            data.points.forEach(p => {
+                pointsHTML += `<li><i class="fa-solid fa-circle-check"></i> ${p}</li>`;
+            });
+
+            const content = `
+                <div class="modal-header">
+                    <i class="fa-solid ${data.icon} modal-icon"></i>
+                    <h2>${data.title}</h2>
+                </div>
+                <p class="modal-desc">${data.desc}</p>
+                <div class="modal-details">
+                    <h4><i class="fa-solid fa-list-check"></i> Alcance del Servicio:</h4>
+                    <ul class="modal-list">${pointsHTML}</ul>
+                </div>
+                <a href="contacto.html" class="btn btn-primary modal-btn">Cotizar este Servicio <i class="fa-solid fa-paper-plane"></i></a>
+            `;
+
+            document.getElementById('service-modal-content').innerHTML = content;
+            document.getElementById('service-modal-container').classList.add('active');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal-container').classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('service-modal-container');
+            if (event.target === modal) {
+                closeServiceModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
